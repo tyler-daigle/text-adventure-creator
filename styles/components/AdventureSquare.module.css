@@ -1,0 +1,30 @@
+.adventureSquare {
+  border: solid 1px black;
+  padding: 5px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.adventureSquare:hover {
+  background-color: #e4e4e4;
+}
+
+.adventureSquare:first-of-type {
+  background-color: red;
+  grid-row: 1;
+  grid-column: 1/5;
+  width: 25%;
+  justify-self: center;
+}
+
+.adventureSquare:last-of-type {
+  background-color: blue;
+  grid-row: 8;
+  grid-column: 1/5;
+  width: 25%;
+  justify-self: center;
+}

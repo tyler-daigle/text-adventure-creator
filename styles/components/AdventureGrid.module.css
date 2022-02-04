@@ -1,0 +1,11 @@
+.adventureGrid {
+  border: solid 1px black;
+  max-width: 800px;
+  min-width: 800px;
+  padding: 10px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  grid-auto-rows: 75px;
+  gap: 10px;
+}
