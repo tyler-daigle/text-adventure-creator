@@ -20,11 +20,3 @@
   width: 25%;
   justify-self: center;
 }
-
-.adventureSquare:last-of-type {
-  background-color: blue;
-  grid-row: 8;
-  grid-column: 1/5;
-  width: 25%;
-  justify-self: center;
-}
