@@ -35,15 +35,19 @@ export function createNode(adventureText: string, choices: string[]) : GameNode 
 
 // setNode() 
 // nodeNum is the index of the node to set
-// node is the actual node to set at that index
+// node is the actual node data to set at that index
 export function setNode(nodeNum: number, grid: GameGrid, node: GameNode): GameGrid {
   if(nodeNum < 0 || nodeNum > grid.numSquares) {
     throw new Error("Tried to set a square that doesn't exist");
   }
 
-  // TODO: actually set the square.
+  const newNodes: GameNode[] = grid.nodes.map((n, index) => index === nodeNum ? node : n);  
   
-  return grid;
+  return {
+    numSquares: grid.numSquares,
+    adjacencyList: [...grid.adjacencyList],
+    nodes: newNodes
+  };
 }
 
 export function getNode(nodeNum: number, grid: GameGrid) : GameNode {

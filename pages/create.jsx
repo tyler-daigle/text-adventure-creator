@@ -1,5 +1,5 @@
 import AdventureGrid from "../components/AdventureGrid";
-import { createGrid } from "../shared/adventure-grid";
+import { createGrid, setNode, createNode } from "../shared/game-grid";
 
 // const gridData = {
 //   adjacenyList: { 0: [1, 9], 1: [9] },
@@ -10,13 +10,32 @@ import { createGrid } from "../shared/adventure-grid";
 // };
 
 function createAdventureData() {
-  const adventureData = createGrid(25);
+  let adventureData = createGrid(25);
+  adventureData = setNode(0, adventureData, {
+    text: "First Item",
+    choices: [],
+  });
+  adventureData = setNode(14, adventureData, {
+    text: "Item 14 is here",
+    choices: [],
+  });
+  adventureData = setNode(6, adventureData, {
+    text: "Item 6 is here",
+    choices: [],
+  });
+  adventureData = setNode(9, adventureData, {
+    text: "Item 9 is here",
+    choices: [],
+  });
+  adventureData = setNode(23, adventureData, {
+    text: "Item 23 is here",
+    choices: [],
+  });
   return adventureData;
 }
 
 export default function Create() {
   const gridData = createAdventureData();
-  gridData.nodes[0].text = "";
   return (
     <div>
       <h1>Create Your Adventure</h1>
